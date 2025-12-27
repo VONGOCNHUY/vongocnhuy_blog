@@ -6,6 +6,8 @@ on:
       - deployBranch
     paths-ignore:
       - 'dist/**'
+      - 'assets/**'      # Tránh loop khi commit assets
+      - 'images/**'      # Tránh loop khi commit images
       - '.github/workflows/build-and-deploy.yml'
 
 permissions:
@@ -37,7 +39,9 @@ jobs:
 
       - name: Copy dist to root
         run: |
-          # Copy nội dung của dist lên root (trừ các file source code)
+          # Xóa các file build cũ ở root (tránh conflict)
+          rm -rf assets/ images/ index.html
+          # Copy nội dung của dist lên root
           cp -r dist/* .
           # Giữ lại các file cần thiết
           git checkout deployBranch -- .gitignore
@@ -50,7 +54,8 @@ jobs:
 
       - name: Commit and push
         run: |
-          git add .
+          # Chỉ add các file build, không add source code
+          git add assets/ images/ index.html
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
