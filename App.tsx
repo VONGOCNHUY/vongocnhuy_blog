@@ -40,8 +40,8 @@ const useLanguage = () => {
 
 const getCategoryStyles = (category: Category) => {
   switch(category) {
-    case 'Java Deep Dive': return 'bg-orange-50/50 text-orange-400 border-orange-100/50';
-    case 'JavaScript Advanced': return 'bg-blue-50/50 text-blue-400 border-blue-100/50';
+    case 'Java': return 'bg-orange-50/50 text-orange-400 border-orange-100/50';
+    case 'JavaScript': return 'bg-blue-50/50 text-blue-400 border-blue-100/50';
     default: return 'bg-pink-50/50 text-pink-300 border-pink-100/50';
   }
 };
