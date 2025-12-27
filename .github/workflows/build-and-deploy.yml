@@ -39,13 +39,10 @@ jobs:
 
       - name: Copy dist to root
         run: |
-          # Xóa các file build cũ ở root (tránh conflict)
-          rm -rf assets/ images/ index.html
-          # Copy nội dung của dist lên root
+          # Copy nội dung của dist lên root (cp sẽ tự động ghi đè file cũ)
           cp -r dist/* .
           # Giữ lại các file cần thiết
-          git checkout deployBranch -- .gitignore
-          git checkout deployBranch -- README.md
+          git checkout deployBranch -- .gitignore README.md
 
       - name: Configure Git
         run: |
