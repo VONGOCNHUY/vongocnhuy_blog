@@ -88,7 +88,7 @@ export const CERTIFICATIONS: Certification[] = [
     },
     issuer: "Cisco Networking Academy",
     date: "11/2025",
-    image: "/images/cc3.jpg",
+    image: "/vongocnhuy_blog/images/cc3.jpg",
     reflection: {
       vi: "Chứng chỉ này đánh dấu bước đầu tiên của tôi khi tiếp cận JavaScript một cách bài bản. Quá trình học giúp tôi tự tin hơn với tư duy lập trình và tạo động lực để tiếp tục theo đuổi con đường phát triển web lâu dài.",
       en: "This certification marks my first structured step into JavaScript, helping me gain confidence and motivation to continue my web development journey."
@@ -103,7 +103,7 @@ export const CERTIFICATIONS: Certification[] = [
     },
     issuer: "Cisco Networking Academy",
     date: "12/2025",
-    image: "/images/cc2.jpg",
+    image: "/vongocnhuy_blog/images/cc2.jpg",
     reflection: {
       vi: "Sau khi hoàn thành JavaScript Essentials 2, tôi cảm nhận rõ sự tiến bộ trong cách tư duy và tổ chức mã nguồn. Chứng chỉ này giúp tôi nhìn JavaScript không chỉ là cú pháp, mà là một công cụ để giải quyết vấn đề.",
       en: "Completing this certificate helped me think more structurally about JavaScript and view it as a problem-solving tool rather than just a programming language."
@@ -118,7 +118,7 @@ export const CERTIFICATIONS: Certification[] = [
     },
     issuer: "Cisco Networking Academy",
     date: "11/2025",
-    image: "/images/cc1.jpg",
+    image: "/vongocnhuy_blog/images/cc1.jpg",
     reflection: {
       vi: "Chứng chỉ Networking Basics giúp tôi hiểu rõ hơn nền tảng hoạt động của mạng máy tính. Điều này rất hữu ích khi học lập trình, vì tôi có cái nhìn tổng thể hơn về cách ứng dụng giao tiếp và vận hành trong môi trường mạng.",
       en: "This certification gave me a clearer understanding of networking fundamentals, allowing me to better grasp how applications communicate in real-world environments."
