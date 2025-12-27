@@ -35,18 +35,26 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || '' }}
 
+      - name: Copy dist to root
+        run: |
+          # Copy nội dung của dist lên root (trừ các file source code)
+          cp -r dist/* .
+          # Giữ lại các file cần thiết
+          git checkout deployBranch -- .gitignore
+          git checkout deployBranch -- README.md
+
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit and push dist folder
+      - name: Commit and push
         run: |
-          git add dist/
+          git add .
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Build: Update dist folder [skip ci]"
+            git commit -m "Build: Deploy built files to root [skip ci]"
             git push origin deployBranch
           fi
 
